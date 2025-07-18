@@ -201,24 +201,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const contactForm = document.querySelector('.contact-form form');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const nameInput = contactForm.querySelector('input[name="name"]');
-        const emailInput = contactForm.querySelector('input[name="email"]');
-        const messageInput = contactForm.querySelector('textarea[name="message"]');
+    const contactForm = document.querySelector('#contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nameInput = contactForm.querySelector('input[name="name"]');
+            const emailInput = contactForm.querySelector('input[name="email"]');
+            const messageInput = contactForm.querySelector('textarea[name="message"]');
 
-        if (nameInput.value && emailInput.value && messageInput.value) {
-            alert('Thank you for your message!');
-            nameInput.value = '';
-            emailInput.value = '';
-            messageInput.value = '';
-        } else {
-            alert('Please fill out all fields.');
-        }
-    });
+            if (nameInput.value && emailInput.value && messageInput.value) {
+                alert('Thank you for your message!');
+                nameInput.value = '';
+                emailInput.value = '';
+                messageInput.value = '';
+            } else {
+                alert('Please fill out all fields.');
+            }
+        });
+    }
 
     const tabs = document.querySelector('.tabs');
+    if (tabs) {
+        const tabButtons = tabs.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.addEventListener('click', (e) => {
+            const id = e.target.dataset.tab;
+            if (id) {
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                e.target.classList.add('active');
+
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                const element = document.getElementById(id);
+                element.classList.add('active');
+.tabs');
     if (tabs) {
         const tabButtons = tabs.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
@@ -259,4 +279,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setLanguage(currentLanguage);
+
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const accordionItem = header.parentElement;
+            const accordionContent = header.nextElementSibling;
+
+            if (accordionContent.style.maxHeight) {
+                accordionContent.style.maxHeight = null;
+                accordionItem.classList.remove('active');
+            } else {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                accordionItem.classList.add('active');
+            }
+        });
+    });
+});
+            }
+        });
+    }
+
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxImages = document.querySelectorAll('.lightbox-image');
+        const closeLightbox = document.querySelector('.close-lightbox');
+
+        lightboxImages.forEach(image => {
+            image.addEventListener('click', () => {
+                lightbox.style.display = 'block';
+                lightboxImg.src = image.src;
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    }
+
+    setLanguage(currentLanguage);
+
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
+    });
 });
