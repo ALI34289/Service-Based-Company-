@@ -18,21 +18,45 @@ body {
 
 /* Header */
 header {
-    background: #0d1b2a;
-    color: #ffffff;
-    padding-top: 20px;
-    min-height: 80px;
-    border-bottom: #007bff 3px solid;
+    background: #ffffff;
+    color: #212529;
+    padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: slide-in 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 header a {
-    color: #ffffff;
+    color: #212529;
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 16px;
+    position: relative;
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #0D6EFD;
+    transition: width 0.3s;
+}
+
+header a:hover::after {
+    width: 100%;
 }
 
 header ul {
@@ -55,7 +79,9 @@ header #branding {
 
 header #branding h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 header #branding p {
@@ -63,9 +89,40 @@ header #branding p {
     font-size: 14px;
 }
 
-header .highlight, header .current a {
-    color: #007bff;
-    font-weight: bold;
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    transition: width 0.3s;
+    width: 150px;
+}
+
+.search-container input:focus {
+    width: 250px;
+}
+
+.search-container button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.language-switcher, .theme-switcher {
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 header a:hover {
@@ -304,55 +361,83 @@ body.dark-mode footer {
 }
 
 /* Services Overview Section */
-#services-overview.bg-white {
+#industries-we-serve.bg-white {
     background: #F9FAFB;
     padding: 80px 0;
 }
 
-.services-grid {
+.industry-grid-4 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
-.service-card {
+.industry-card {
     background: #ffffff;
-    padding: 40px;
+    padding: 30px;
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.service-card:hover {
+.industry-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.service-card img {
+.industry-card img {
     margin-bottom: 20px;
 }
 
-.service-card h3 {
+.industry-card h3 {
     color: #0d1b2a;
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.service-card p {
-    font-size: 16px;
-    color: #6C757D;
+@media(max-width: 1200px){
+    .industry-grid-5 {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media(max-width: 992px){
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .industry-grid-5 {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media(max-width: 768px){
-    .services-grid {
-        grid-template-columns: 1fr;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header-right {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .search-container {
+        display: none;
     }
 }
 
