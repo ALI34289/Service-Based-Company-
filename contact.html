@@ -6,6 +6,7 @@
     <title>Itzenix - Contact Us</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -46,12 +47,14 @@
             <section>
                 <h2 data-translate="Contact Us">Contact Us</h2>
                 <div class="contact-form">
-                    <form>
+                    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
                         <input type="text" name="name" placeholder="Your Name" data-translate="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" data-translate="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
                         <textarea name="message" placeholder="Your Message" data-translate="Your Message" required></textarea>
                         <button type="submit" class="cta-button" data-translate="Send Message">Send Message</button>
                     </form>
+                    <p id="form-status"></p>
                 </div>
             </section>
         </div>
