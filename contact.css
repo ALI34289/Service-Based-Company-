@@ -1,1 +1,17 @@
-/* Add your styles for the contact page here */
+/* Contact Section */
+main section {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+main h2 {
+    text-align: center;
+    color: #0d1b2a;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}

@@ -1,1 +1,20 @@
-/* Add your styles for the philosophy page here */
+/* Philosophy Section */
+main section {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+main h2 {
+    text-align: center;
+    color: #0d1b2a;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+main p {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}

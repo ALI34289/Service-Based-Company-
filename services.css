@@ -1,0 +1,32 @@
+/* Services Section */
+main section {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+main h2 {
+    text-align: center;
+    color: #0d1b2a;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+main div {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main h3 {
+    color: #007bff;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 18px;
+    color: #333;
+}
