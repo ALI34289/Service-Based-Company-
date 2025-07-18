@@ -15,11 +15,11 @@
             </div>
             <nav>
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-translate="Home">Home</a></li>
+                    <li><a href="services.html" data-translate="Services">Services</a></li>
+                    <li><a href="portfolio.html" data-translate="Portfolio">Portfolio</a></li>
+                    <li><a href="about.html" data-translate="About Us">About Us</a></li>
+                    <li><a href="contact.html" data-translate="Contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-right">
@@ -43,35 +43,16 @@
     </header>
     <main>
         <section>
-            <h2>Careers</h2>
-            <p>We invite talented developers and designers to join our team. We offer growth opportunities, remote options, and have the following current openings:</p>
+            <h2 data-translate="Careers">Careers</h2>
+            <p data-translate="We invite talented developers and designers to join our team. We offer growth opportunities, remote options, and have the following current openings:">We invite talented developers and designers to join our team. We offer growth opportunities, remote options, and have the following current openings:</p>
             <ul>
-                <li>Frontend Developer</li>
-                <li>Backend Developer</li>
-                <li>UI/UX Designer</li>
+                <li data-translate="Frontend Developer">Frontend Developer</li>
+                <li data-translate="Backend Developer">Backend Developer</li>
+                <li data-translate="UI/UX Designer">UI/UX Designer</li>
             </ul>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <div class="contact-form">
-                <h3>Contact Us</h3>
-                <form>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-            </div>
-            <div class="social-icons">
-                <a href="#">f</a>
-                <a href="#">t</a>
-                <a href="#">l</a>
-            </div>
-            <a href="tel:+1234567890" class="call-now-button">Call Us Now</a>
-            <p>&copy; 2024 Itzenix. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -87,5 +68,12 @@
     <!--End of Tawk.to Script-->
     <script src="script.js"></script>
     <script src="careers.js"></script>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>

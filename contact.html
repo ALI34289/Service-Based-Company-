@@ -15,11 +15,11 @@
             </div>
             <nav>
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="current"><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-translate="Home">Home</a></li>
+                    <li><a href="services.html" data-translate="Services">Services</a></li>
+                    <li><a href="portfolio.html" data-translate="Portfolio">Portfolio</a></li>
+                    <li><a href="about.html" data-translate="About Us">About Us</a></li>
+                    <li class="current"><a href="contact.html" data-translate="Contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-right">
@@ -44,29 +44,19 @@
     <main>
         <div class="container">
             <section>
-                <h2>Contact Us</h2>
+                <h2 data-translate="Contact Us">Contact Us</h2>
                 <div class="contact-form">
                     <form>
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="cta-button">Send Message</button>
+                        <input type="text" name="name" placeholder="Your Name" data-translate="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" data-translate="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" data-translate="Your Message" required></textarea>
+                        <button type="submit" class="cta-button" data-translate="Send Message">Send Message</button>
                     </form>
                 </div>
             </section>
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="#">f</a>
-                <a href="#">t</a>
-                <a href="#">l</a>
-            </div>
-            <a href="tel:+1234567890" class="call-now-button">Call Us Now</a>
-            <p>&copy; 2024 Itzenix. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -82,5 +72,12 @@
     <!--End of Tawk.to Script-->
     <script src="script.js"></script>
     <script src="contact.js"></script>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
