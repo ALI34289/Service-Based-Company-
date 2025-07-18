@@ -259,4 +259,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setLanguage(currentLanguage);
+
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const accordionItem = header.parentElement;
+            const accordionContent = header.nextElementSibling;
+
+            if (accordionContent.style.maxHeight) {
+                accordionContent.style.maxHeight = null;
+                accordionItem.classList.remove('active');
+            } else {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                accordionItem.classList.add('active');
+            }
+        });
+    });
 });
