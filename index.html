@@ -3,409 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itzenix - Web Development & Custom Software</title>
-    <meta name="description" content="Itzenix provides professional web development, custom software, and UI/UX design services to help your business grow.">
-    <meta name="keywords" content="web development, custom software, ui/ux design, e-commerce, mobile apps">
-    <meta property="og:title" content="Itzenix - Web Development & Custom Software">
-    <meta property="og:description" content="Professional web development, custom software, and UI/UX design services.">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Itzenix",
-      "url": "https://www.itzenix.com",
-      "logo": "https://www.itzenix.com/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-XXXXXXXXXX",
-        "contactType": "customer service"
-      },
-      "sameAs": [
-        "https://www.facebook.com/itzenix",
-        "https://www.instagram.com/itzenix",
-        "https://www.linkedin.com/company/itzenix"
-      ]
-    }
-    </script>
+    <title>BrightByte - Tech Tutoring</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #007BFF;
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .features-grid {
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: #f4f4f4;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 2rem;
+            margin: 1rem auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+
+        .testimonial-card span {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .pricing-grid {
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007BFF;
+            margin: 1rem 0;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .pricing-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: #fff;
+        }
+
+        .contact h2 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 0.5rem;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            align-self: center;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .pricing-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .testimonial-card {
+                margin: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <div class="container">
-            <div id="branding">
-                <h1><a href="index.html">Itzenix</a></h1>
-            </div>
+            <a href="#" class="logo">BrightByte</a>
             <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html" data-translate="Home">Home</a></li>
-                    <li><a href="services.html" data-translate="Services">Services</a></li>
-                    <li><a href="portfolio.html" data-translate="Portfolio">Portfolio</a></li>
-                    <li><a href="about.html" data-translate="About Us">About Us</a></li>
-                    <li><a href="contact.html" data-translate="Contact">Contact</a></li>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div class="header-right">
-                <div class="search-container">
-                    <input type="text" placeholder="Search...">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </div>
-                <div class="language-switcher">
-                    <span>🌐 EN | हिन्दी</span>
-                </div>
-                <div class="theme-switcher">
-                    <span>🌙</span>
-                </div>
-                <button class="hamburger" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </div>
         </div>
     </header>
-    <section class="hero">
-        <div class="container">
-            <h1 data-translate="We Build Websites That Work. We Build Software That Performs.">We Build Websites That Work. We Build Software That Performs.</h1>
-            <p data-translate="Custom websites & software crafted for speed, security, and scale.">Custom websites & software crafted for speed, security, and scale.</p>
-            <a href="#contact-form" class="cta-button" data-translate="Get a Free Quote">Get a Free Quote</a>
-            <a href="#work-in-action" class="cta-button" data-translate="View Our Work">View Our Work</a>
-        </div>
-    </section>
-    <section id="services" class="bg-white">
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "serviceType": "Web Development",
-          "provider": {
-            "@type": "Organization",
-            "name": "Itzenix"
-          }
-        }
-        </script>
-        <div class="container">
-            <div class="section-heading-dark">
-                <h2 data-translate="Select Your Industry. Discover Our Impact.">Select Your Industry. Discover Our Impact.</h2>
-                <p data-translate="Explore the sectors where we deliver tailored solutions and measurable results.">Explore the sectors where we deliver tailored solutions and measurable results.</p>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Unlock Your Tech Potential</h1>
+                <p>Personalized tutoring to help you master technology.</p>
+                <a href="#contact" class="cta-button">Get Started</a>
             </div>
-            <div class="industry-grid-4">
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/bank.png" alt="Banking Icon">
-                    <h3>Banking</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/bullish.png" alt="Capital Markets Icon">
-                    <h3>Capital Markets</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/multiple-devices.png" alt="Communications Icon">
-                    <h3>Communications, Media, and Information Services</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/shopping-cart.png" alt="Consumer Goods Icon">
-                    <h3>Consumer Goods and Distribution</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/school.png" alt="Education Icon">
-                    <h3>Education</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/factory.png" alt="Energy Icon">
-                    <h3>Energy, Resources, and Utilities</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/heart-with-pulse.png" alt="Healthcare Icon">
-                    <h3>Healthcare</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/processor.png" alt="High Tech Icon">
-                    <h3>High Tech</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/shield.png" alt="Insurance Icon">
-                    <h3>Insurance</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/dna-helix.png" alt="Life Sciences Icon">
-                    <h3>Life Sciences</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/robot.png" alt="Manufacturing Icon">
-                    <h3>Manufacturing</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/city-hall.png" alt="Public Services Icon">
-                    <h3>Public Services</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/shop.png" alt="Retail Icon">
-                    <h3>Retail</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/airport.png" alt="Travel Icon">
-                    <h3>Travel and Logistics</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/real-estate.png" alt="Real Estate Icon">
-                    <h3>Real Estate</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/online-store.png" alt="E-commerce Icon">
-                    <h3>E-commerce</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/car.png" alt="Automotive Icon">
-                    <h3>Automotive</h3>
-                </div>
-                <div class="industry-card">
-                    <img src="https://img.icons8.com/color/64/000000/bed.png" alt="Hospitality Icon">
-                    <h3>Hospitality</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="our-process">
-        <div class="container">
-            <div class="section-heading-dark">
-                <h2 data-translate="Our Process">Our Process</h2>
-                <p data-translate="We follow a simple and effective process to deliver the best results.">We follow a simple and effective process to deliver the best results.</p>
-            </div>
-            <div class="process-wrapper">
-                <div class="process-step">
-                    <div class="process-icon">1</div>
-                    <h3 data-translate="Discovery">Discovery</h3>
-                    <p data-translate="We start by understanding your business and goals.">We start by understanding your business and goals.</p>
-                </div>
-                <div class="process-arrow"></div>
-                <div class="process-step">
-                    <div class="process-icon">2</div>
-                    <h3 data-translate="Planning">Planning</h3>
-                    <p data-translate="We create a detailed plan and timeline for your project.">We create a detailed plan and timeline for your project.</p>
-                </div>
-                <div class="process-arrow"></div>
-                <div class="process-step">
-                    <div class="process-icon">3</div>
-                    <h3 data-translate="Development">Development</h3>
-                    <p data-translate="We build your website or software with the latest technologies.">We build your website or software with the latest technologies.</p>
-                </div>
-                <div class="process-arrow"></div>
-                <div class="process-step">
-                    <div class="process-icon">4</div>
-                    <h3 data-translate="Launch">Launch</h3>
-                    <p data-translate="We deploy your project and provide ongoing support.">We deploy your project and provide ongoing support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="testimonials">
-        <div class="container">
-            <div class="section-heading-dark">
-                <h2 data-translate="What Our Clients Say">What Our Clients Say</h2>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <img src="https://via.placeholder.com/80" alt="Client Photo">
-                    <h3>John Doe</h3>
-                    <p class="company">ABC Corp</p>
-                    <div class="rating">
-                        <span>⭐️</span><span>⭐️</span><span>⭐️</span><span>⭐️</span><span>⭐️</span>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="https://via.placeholder.com/100" alt="Personalized Learning Icon">
+                        <h3>Personalized Learning</h3>
+                        <p>Our tutors tailor each session to your individual needs and learning style.</p>
                     </div>
-                    <p>"Itzenix delivered a fantastic website that exceeded our expectations. Highly recommended!"</p>
+                    <div class="feature-card">
+                        <img src="https://via.placeholder.com/100" alt="Expert Tutors Icon">
+                        <h3>Expert Tutors</h3>
+                        <p>Learn from experienced professionals who are passionate about technology.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://via.placeholder.com/100" alt="Flexible Scheduling Icon">
+                        <h3>Flexible Scheduling</h3>
+                        <p>We offer flexible scheduling options to fit your busy life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Students Say</h2>
+                <div class="testimonial-card">
+                    <p>"BrightByte helped me finally understand coding. My tutor was patient and knowledgeable. Highly recommended!"</p>
+                    <span>- Alex Smith</span>
                 </div>
                 <div class="testimonial-card">
-                    <img src="https://via.placeholder.com/80" alt="Client Photo">
-                    <h3>Jane Smith</h3>
-                    <p class="company">XYZ Inc</p>
-                    <div class="rating">
-                        <span>⭐️</span><span>⭐️</span><span>⭐️</span><span>⭐️</span><span>⭐️</span>
+                    <p>"The flexible scheduling was a huge plus for me. I was able to learn at my own pace and on my own time."</p>
+                    <span>- Maria Garcia</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Our Plans</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Basic</h3>
+                        <p class="price">$49/hr</p>
+                        <ul>
+                            <li>One-on-one tutoring</li>
+                            <li>Email support</li>
+                            <li>Flexible scheduling</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Plan</a>
                     </div>
-                    <p>"The custom software they developed has transformed our business. Exceptional work!"</p>
-                </div>
-                <div class="testimonial-card">
-                    <img src="https://via.placeholder.com/80" alt="Client Photo">
-                    <h3>Peter Jones</h3>
-                    <p class="company">123 Ltd</p>
-                    <div class="rating">
-                        <span>⭐️</span><span>⭐️</span><span>⭐️</span><span>⭐️</span><span>⭐️</span>
+                    <div class="pricing-card">
+                        <h3>Pro</h3>
+                        <p class="price">$179/mo</p>
+                        <ul>
+                            <li>4 hours of tutoring per month</li>
+                            <li>Priority email support</li>
+                            <li>Personalized learning plan</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Plan</a>
                     </div>
-                    <p>"Their attention to detail and commitment to quality is second to none. A pleasure to work with."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="work-in-action">
-        <div class="container">
-            <div class="section-heading-dark">
-                <h2 data-translate="Our Work in Action">Our Work in Action</h2>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 1" class="lightbox-image">
-                    <h3>Project 1</h3>
-                    <p>A brief description of Project 1.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 2" class="lightbox-image">
-                    <h3>Project 2</h3>
-                    <p>A brief description of Project 2.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 3" class="lightbox-image">
-                    <h3>Project 3</h3>
-                    <p>A brief description of Project 3.</p>
-                </div>
-            </div>
-            <div class="cta-container">
-                <a href="portfolio.html" class="cta-button-pro" data-translate="View Full Portfolio">View Full Portfolio</a>
-            </div>
-        </div>
-    </section>
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
-    <section id="tech-stack">
-        <div class="container">
-            <div class="section-heading-dark">
-                <h2 data-translate="Our Tech Stack">Our Tech Stack</h2>
-                <p data-translate="We use the latest and greatest technologies to build our solutions.">We use the latest and greatest technologies to build our solutions.</p>
-            </div>
-            <div class="tech-grid">
-                <div class="tech-item" data-tooltip="HTML5">
-                    <img src="https://img.icons8.com/color/96/000000/html-5.png" alt="HTML5">
-                </div>
-                <div class="tech-item" data-tooltip="CSS3">
-                    <img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS3">
-                </div>
-                <div class="tech-item" data-tooltip="JavaScript">
-                    <img src="https://img.icons8.com/color/96/000000/javascript.png" alt="JavaScript">
-                </div>
-                <div class="tech-item" data-tooltip="React">
-                    <img src="https://img.icons8.com/color/96/000000/react-native.png" alt="React">
-                </div>
-                <div class="tech-item" data-tooltip="Node.js">
-                    <img src="https://img.icons8.com/color/96/000000/nodejs.png" alt="Node.js">
-                </div>
-                <div class="tech-item" data-tooltip="MongoDB">
-                    <img src="https://img.icons8.com/color/96/000000/mongodb.png" alt="MongoDB">
-                </div>
-                <div class="tech-item" data-tooltip="Firebase">
-                    <img src="https://img.icons8.com/color/96/000000/firebase.png" alt="Firebase">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="news-updates">
-        <div class="container">
-            <div class="section-heading-dark">
-                <h2 data-translate="Latest Buzz from Itzenix">Latest Buzz from Itzenix</h2>
-                <p data-translate="Stay updated with the latest trends, company news, and announcements from Itzenix.">Stay updated with the latest trends, company news, and announcements from Itzenix.</p>
-            </div>
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-card-header">
-                        <span class="news-tag">Announcement</span>
-                        <span class="news-date">October 26, 2024</span>
+                    <div class="pricing-card">
+                        <h3>Premium</h3>
+                        <p class="price">$299/mo</p>
+                        <ul>
+                            <li>8 hours of tutoring per month</li>
+                            <li>24/7 support</li>
+                            <li>Career coaching</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Plan</a>
                     </div>
-                    <h3 data-translate="Itzenix Launches New AI-Powered Platform">Itzenix Launches New AI-Powered Platform</h3>
-                    <p data-translate="We are excited to announce the launch of our new AI-powered platform, designed to help businesses automate their workflows and improve efficiency.">We are excited to announce the launch of our new AI-powered platform, designed to help businesses automate their workflows and improve efficiency.</p>
-                    <a href="https://www.bbc.com/news/technology-12345678" target="_blank" class="read-more" data-translate="Read more">Read more</a>
-                </div>
-                <div class="news-card">
-                    <div class="news-card-header">
-                        <span class="news-tag">Partnership</span>
-                        <span class="news-date">October 20, 2024</span>
-                    </div>
-                    <h3 data-translate="Itzenix Partners with TechCorp to Expand Services">Itzenix Partners with TechCorp to Expand Services</h3>
-                    <p data-translate="We have partnered with TechCorp, a leading provider of cloud solutions, to expand our service offerings and provide more value to our clients.">We have partnered with TechCorp, a leading provider of cloud solutions, to expand our service offerings and provide more value to our clients.</p>
-                    <a href="https://www.bbc.com/news/technology-12345678" target="_blank" class="read-more" data-translate="Read more">Read more</a>
-                </div>
-                <div class="news-card">
-                    <div class="news-card-header">
-                        <span class="news-tag">New Client</span>
-                        <span class="news-date">October 15, 2024</span>
-                    </div>
-                    <h3 data-translate="Itzenix Welcomes New Client, Innovate Inc.">Itzenix Welcomes New Client, Innovate Inc.</h3>
-                    <p data-translate="We are thrilled to welcome Innovate Inc. as our new client. We look forward to helping them achieve their business goals with our custom software solutions.">We are thrilled to welcome Innovate Inc. as our new client. We look forward to helping them achieve their business goals with our custom software solutions.</p>
-                    <a href="https://www.bbc.com/news/technology-12345678" target="_blank" class="read-more" data-translate="Read more">Read more</a>
                 </div>
             </div>
-            <div class="newsletter-signup">
-                <h3 data-translate="Subscribe to our Newsletter">Subscribe to our Newsletter</h3>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
                 <form>
-                    <input type="email" placeholder="Enter your email" data-translate="Enter your email">
-                    <button type="submit" data-translate="Subscribe">Subscribe</button>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
                 </form>
             </div>
-        </div>
-    </section>
-    <section id="why-choose-us">
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <div class="section-heading-dark">
-                <p class="small-heading" data-translate="The edge your business deserves.">The edge your business deserves.</p>
-                <h2 data-translate="Why Choose Us">Why Choose Us</h2>
-                <p data-translate="We deliver more than services — we deliver trust, innovation, and results.">We deliver more than services — we deliver trust, innovation, and results.</p>
-            </div>
-            <div class="why-choose-us-grid">
-                <div class="why-choose-us-card">
-                    <img src="https://img.icons8.com/color/64/000000/people-working-together.png" alt="Expert Team Icon">
-                    <h3 data-translate="Expert Team">Expert Team</h3>
-                    <p data-translate="Our team of certified professionals is dedicated to delivering excellence and innovation.">Our team of certified professionals is dedicated to delivering excellence and innovation.</p>
-                </div>
-                <div class="why-choose-us-card">
-                    <img src="https://img.icons8.com/color/64/000000/time.png" alt="On-Time Delivery Icon">
-                    <h3 data-translate="On-Time Delivery">On-Time Delivery</h3>
-                    <p data-translate="We value your time and are committed to delivering projects on schedule, every time.">We value your time and are committed to delivering projects on schedule, every time.</p>
-                </div>
-                <div class="why-choose-us-card">
-                    <img src="https://img.icons8.com/color/64/000000/money-bag.png" alt="Affordable Pricing Icon">
-                    <h3 data-translate="Affordable Pricing">Affordable Pricing</h3>
-                    <p data-translate="We offer competitive pricing without compromising on quality or service.">We offer competitive pricing without compromising on quality or service.</p>
-                </div>
-                <div class="why-choose-us-card">
-                    <img src="https://img.icons8.com/officel/64/000000/24-7-support.png" alt="24/7 Support Icon">
-                    <h3 data-translate="24/7 Support">24/7 Support</h3>
-                    <p data-translate="Our dedicated support team is available around the clock to assist you.">Our dedicated support team is available around the clock to assist you.</p>
-                </div>
-                <div class="why-choose-us-card">
-                    <img src="https://img.icons8.com/color/64/000000/idea.png" alt="Innovative Solutions Icon">
-                    <h3 data-translate="Innovative Solutions">Innovative Solutions</h3>
-                    <p data-translate="We provide cutting-edge solutions tailored to your specific business needs.">We provide cutting-edge solutions tailored to your specific business needs.</p>
-                </div>
-                <div class="why-choose-us-card">
-                    <img src="https://img.icons8.com/color/64/000000/lock.png" alt="Secure & Reliable Icon">
-                    <h3 data-translate="Secure & Reliable">Secure & Reliable</h3>
-                    <p data-translate="We prioritize security and reliability in all our products and services.">We prioritize security and reliability in all our products and services.</p>
-                </div>
-            </div>
-            <div class="cta-container">
-                <a href="#services" class="cta-button-pro" data-translate="Explore Our Services">Explore Our Services</a>
+            <p>&copy; 2024 BrightByte. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
             </div>
         </div>
     </footer>
-    <div id="footer-placeholder"></div>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/65b1a6c18d261e1b5f58de8e/1hkvt3hgr';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
-    <script src="script.js"></script>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
-    </script>
+
 </body>
 </html>
